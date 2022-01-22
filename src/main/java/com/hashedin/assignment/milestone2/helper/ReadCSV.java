@@ -16,7 +16,7 @@ public class ReadCSV {
         BufferedReader br = null;
         try {
             br = new BufferedReader(
-                    new FileReader("C:\\Users\\hp\\workspace-hashedin\\Assign-1\\resources\\netfilx_titles.csv"));
+                    new FileReader(System.getProperty("user.dir") + "\\netfilx_titles.csv"));
             String line = "";
             final String splitByRegex = ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)";
             while ((line = br.readLine()) != null) {
